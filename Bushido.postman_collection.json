@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "91e4c67f-2f70-4a24-8975-468b57fce33b",
+		"name": "Bushido",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4945952"
+	},
+	"item": [
+		{
+			"name": "Cotizaciones",
+			"item": [
+				{
+					"name": "Dólares a Euros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/quotes/latest?from=USD&to=EUR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"quotes",
+								"latest"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "USD"
+								},
+								{
+									"key": "to",
+									"value": "EUR"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/v1/quotes/latest?from=USD&to=EUR\"\r\ncurl -X GET \"http://localhost:8080/api/v1/quotes/latest?from=GBP&to=JPY\" "
+					},
+					"response": []
+				},
+				{
+					"name": "Libra Esterlina a Yen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/quotes/latest?from=GBP&to=JPY",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"quotes",
+								"latest"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "GBP"
+								},
+								{
+									"key": "to",
+									"value": "JPY"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/v1/quotes/latest?from=GBP&to=JPY\""
+					},
+					"response": []
+				},
+				{
+					"name": "Listado todas las consultas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/quotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"quotes"
+							]
+						},
+						"description": "Generated from cURL: curl http://localhost:8080/api/v1/quotes"
+					},
+					"response": []
+				},
+				{
+					"name": "Lista consultas por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/quotes/<REPLACE_WITH_SAVED_QUOTE_ID>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"quotes",
+								"<REPLACE_WITH_SAVED_QUOTE_ID>"
+							]
+						},
+						"description": "Generated from cURL: curl http://localhost:8080/api/v1/quotes/<REPLACE_WITH_SAVED_QUOTE_ID>"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crear un Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Alice Smith\", \"email\": \"alice.smith@example.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST -H \"Content-Type: application/json\" -d '{\"name\": \"Alice Smith\", \"email\": \"alice.smith@example.com\"}' http://localhost:8080/api/v1/users\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un Grupo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Administrators\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"groups"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST -H \"Content-Type: application/json\" -d '{\"name\": \"Administrators\"}' http://localhost:8080/api/v1/groups\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuario por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/v1/users/8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Asignar Grupo 'Administrators' al Usuario 'Alice' de ejemplo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"groupIds\": [\"2ea77c34-f403-4c20-9de9-354a5b3f43f2\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/2ea77c34-f403-4c20-9de9-354a5b3f43f2/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"2ea77c34-f403-4c20-9de9-354a5b3f43f2",
+						"groups"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST -H \"Content-Type: application/json\" -d '{\"groupIds\": [\"2ea77c34-f403-4c20-9de9-354a5b3f43f2\"]}' http://localhost:8080/api/v1/users/2ea77c34-f403-4c20-9de9-354a5b3f43f2/groups\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una Configuración para el Grupo 'Administrators'",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ruleName\": \"Manage Users\", \"access\": \"EDIT\", \"groupId\": \"2ea77c34-f403-4c20-9de9-354a5b3f43f2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/configurations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"configurations"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST -H \"Content-Type: application/json\" -d '{\"ruleName\": \"Manage Users\", \"access\": \"EDIT\", \"groupId\": \"2ea77c34-f403-4c20-9de9-354a5b3f43f2\"}' http://localhost:8080/api/v1/configurations\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener la Configuración por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/configurations/<REPLACE_WITH_CONFIG_ID>echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"configurations",
+						"<REPLACE_WITH_CONFIG_ID>echo"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/v1/configurations/<REPLACE_WITH_CONFIG_ID>\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas las Configuraciones del Grupo 'Administrators'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/configurations?groupId=2ea77c34-f403-4c20-9de9-354a5b3f43f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"configurations"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "2ea77c34-f403-4c20-9de9-354a5b3f43f2"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"http://localhost:8080/api/v1/configurations?groupId=2ea77c34-f403-4c20-9de9-354a5b3f43f2\"\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar el Acceso de la Configuración",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"access\": \"VIEW\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98/access",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"configurations",
+						"fe6c4451-d0b0-44f5-8d73-7f52fb408d98",
+						"access"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH -H \"Content-Type: application/json\" -d '{\"access\": \"VIEW\"}' http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98/access\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener la Configuración por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"configurations",
+						"fe6c4451-d0b0-44f5-8d73-7f52fb408d98"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el Usuario 'Alice' de ejemplo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Alice S. Updated\", \"email\": \"alice.updated@example.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/<REPLACE_WITH_USER_ID>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"<REPLACE_WITH_USER_ID>"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT -H \"Content-Type: application/json\" -d '{\"name\": \"Alice S. Updated\", \"email\": \"alice.updated@example.com\"}' http://localhost:8080/api/v1/users/<REPLACE_WITH_USER_ID>"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos los Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/v1/users\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos los grupos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"groups"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/v1/groups\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar el Grupo 'Administrators' del Usuario 'Alice' de ejemplo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"groupIds\": [\"2ea77c34-f403-4c20-9de9-354a5b3f43f2\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5",
+						"groups"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE -H \"Content-Type: application/json\" -d '{\"groupIds\": [\"2ea77c34-f403-4c20-9de9-354a5b3f43f2\"]}' http://localhost:8080/api/v1/users/8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5/groups\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener el Usuario por ID (para chequear si se eliminó del grupo)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/<REPLACE_WITH_USER_ID>echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"<REPLACE_WITH_USER_ID>echo"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/v1/users/<REPLACE_WITH_USER_ID>\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar la Configuración",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"configurations",
+						"fe6c4451-d0b0-44f5-8d73-7f52fb408d98"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar el Grupo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/groups/2ea77c34-f403-4c20-9de9-354a5b3f43f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"groups",
+						"2ea77c34-f403-4c20-9de9-354a5b3f43f2"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/v1/groups/2ea77c34-f403-4c20-9de9-354a5b3f43f2\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar el Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/<REPLACE_WITH_USER_ID>echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"<REPLACE_WITH_USER_ID>echo"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/v1/users/<REPLACE_WITH_USER_ID>\r\necho \"\""
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar eliminación con 404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5"
+					]
+				},
+				"description": "Generated from cURL: curl -i http://localhost:8080/api/v1/users/8bbf896d-ee74-4f3b-ab26-88ed9d05a7b5\r\ncurl -i http://localhost:8080/api/v1/groups/2ea77c34-f403-4c20-9de9-354a5b3f43f2\r\ncurl -i http://localhost:8080/api/v1/configurations/fe6c4451-d0b0-44f5-8d73-7f52fb408d98\r\necho \"\""
+			},
+			"response": []
+		}
+	]
+}
