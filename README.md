@@ -87,7 +87,7 @@ GET	                      /api/v1/users/{id}	        Obtener usuario por ID  <br
 PUT	                      /api/v1/users/{id}	        Actualizar usuario  <br>
 DELETE	                  /api/v1/users/{id}	        Borrado lógico <br>
 POST	                    /api/v1/users/{id}/groups	  Asignar grupos <br>
-Ejemplo cURL: en carpeta curl
+Ejemplo cURL: archivo Bushido.postman_collection.json
 
 🏗️ Decisiones de Diseño  <br>
 
